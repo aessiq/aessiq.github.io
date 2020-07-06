@@ -31,7 +31,6 @@ a {
     background-image: url(../images/leftmain.png);
     width: 55%;
     height: 1000px;
-    z-index: -1;
 }
 .rightHeader {
     position: absolute;
@@ -39,7 +38,6 @@ a {
     background-image: url(../images/rightmain.png);
     width: 45%;
     height: 1045px;
-    z-index: -1;
 }
 .nav {    
     display: flex;
@@ -115,6 +113,7 @@ a {
     height: 23px;
     width: 23px;
     margin-right: 50px;
+    z-index: 2;
 }  
 .lang {
     text-transform: uppercase;
@@ -275,4 +274,111 @@ a {
     color: var(--yellow);
     position: absolute;
     top: 410px;
+}
+.wrapper {
+    width: 62%;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+.furniture {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+.furnitureText {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 30px;
+    grid-template-areas:
+        "div1 fur"
+        "div2 text"
+        ". learn";
+} 
+.furnitureText div:first-child {
+    grid-area: div1;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    align-self: center;
+    padding-right: 30px;
+}  
+.furnitureText h2 {
+    font-size: 48px;
+    color: black;
+    font-family: ProximaNovaBold;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    grid-area: fur;
+}
+.furnitureText div:nth-child(3) {
+    grid-area: div2;
+    height: 2px;
+    width: 40px;
+    background-color: var(--yellow);
+    align-self: baseline;
+    justify-self: end;
+    margin-top: 45px;
+}
+.furnitureText p {
+    font-size: 15px;
+    color: #464646;
+    letter-spacing: 0.025em;
+    margin-top: 35px;
+    line-height: 25px;
+    grid-area: text;
+}
+.furnitureText a {
+    text-transform: uppercase;
+    font-family: ProximaNovaBold;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: black;
+    margin-top: 35px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    grid-area: learn;
+}
+.furnitureText a:after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 33px;
+    background-color: var(--yellow);
+    margin-left: 10px;
+}
+.furnitureText a:before {
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border: solid var(--yellow);
+    border-width: 1px 1px 0 0;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 154px;
+    top: 6px;
+}
+.furniture img {
+    width: 50%;
+    grid-area: img;
+}
+.n01 {
+    position:absolute;
+    bottom: 0;
+    left: 5px;
+    font-size: 36px;
+    letter-spacing: 0.075em;
+    font-family: ProximaNovaBold;
+    color: black;
+}
+.n01 span {
+    color: var(--yellow);
+    font-family: ProximaNovaBold;
 }
