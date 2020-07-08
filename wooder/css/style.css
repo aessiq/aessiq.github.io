@@ -69,12 +69,12 @@ a {
 .menu {
     text-transform: uppercase;
     font-size: 15px;
-    width:auto;
     opacity: 0.5;
     font-family: ProximaNovaBold;
     margin-left: 12px;
     color: var(--white);
     transition: all 0.3s linear;
+    z-index: 1;
 }
 .menu:hover {
     opacity: 1;
@@ -912,9 +912,18 @@ a {
 }
 .footer p:last-child a {
     color: var(--yellow);
+    position: relative;
 }
 .footer p:last-child a:visited {
     color: var(--yellow);
+}
+.tooltip {
+    opacity: 0;
+    margin-left: 10px;
+    transition: all 0.5s linear;
+}
+.vk:hover .tooltip {
+    opacity: 1;
 }
 @media screen and (max-width: 768px) {
     .nav {
@@ -1117,5 +1126,8 @@ a {
         font-size: 8px;
         line-height: normal;
         text-align: center;
+    }
+    .tooltip {
+        display: none;
     }
 }
