@@ -913,6 +913,9 @@ a {
 .footer p:last-child a {
     color: var(--yellow);
 }
+.footer p:last-child a:visited {
+    color: var(--yellow);
+}
 @media screen and (max-width: 768px) {
     .nav {
         flex-direction: column;
