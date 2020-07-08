@@ -53,6 +53,9 @@ a {
     margin: 0 auto;
     padding: 20px 0;
 }
+.nav-touch {
+    display: none;
+}
 .navSection {
     display: flex;
     align-items: center;
@@ -926,10 +929,19 @@ a {
     opacity: 1;
 }
 @media screen and (max-width: 768px) {
+    .leftHeader, .rightHeader {
+        z-index: -2;
+    }
     .nav {
         flex-direction: column;
         justify-content: center;
         width: 100%;
+    }
+    .nav-touch {
+        display: flex;
+    }
+    .nav-screen {
+        display: none;
     }
     .navWooder {
         width: 100%;
