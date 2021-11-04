@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="zoos.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;500&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="zoos-media.css">
+  <title>Online Zoo: Aligator</title>
+</head>
+<body>
+  <header>
+    <h1 class="hidden-h1">Online Zoo</h1>
+    <div class="wrapper">
+      <div class="mobile-menu">
+        <a class="logo" href="../main/index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a>
+        <div class="burger-button">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+        </div>
+      </div>
+      <nav>
+        <ul class="menu menu_left">
+          <li><a href="../main/index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a></li>        
+          <li><a href="../main/index.html">About</a></li>
+          <li><a href="../map/map.html">Map</a></li>
+          <li><a class="menu_active" href="#">Zoos</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo" target="_blank">Design</a></li>
+        </ul>
+        <ul class="menu menu_right">
+          <div class="search">
+            <input type="text" placeholder="hello :D">
+            <li><a href="#"><img src="../../assets/icons/search.svg" alt="search"></a></li>
+          </div>          
+          <li class="log-in"><a href="#">Log in</a></li>
+          <li class="sign-up"><a href="#">Sign up</a></li>
+          <li class="profile"><a href="#"><img src="../../assets/images/avatar-default.png" alt="avatar-default"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-animal-selector">
+    <div class="wrapper">
+      <div class="selector-animal">
+        <div class="selector-animal__left">
+          <img src="../../assets/images/320-selector-panda.png" alt="panda">
+          <p class="selector-animal__title">Pandas</p>
+        </div>  
+          <img src="../../assets/icons/320-selector-arrow.svg" alt="dropdown" class="selector-dropdown">      
+      </div>
+      <div class="selector-animal">
+        <div class="selector-animal__left">
+          <img src="../../assets/images/320-selector-eagle.png" alt="eagle">
+          <p class="selector-animal__title">Eagles</p>
+        </div>  
+          <img src="../../assets/icons/320-selector-arrow.svg" alt="dropdown" class="selector-dropdown">      
+      </div>
+      <div class="selector-animal">
+        <div class="selector-animal__left">
+          <img src="../../assets/images/320-selector-gorilla.png" alt="Gorilla">
+          <p class="selector-animal__title">Gorillas</p>
+        </div>  
+          <img src="../../assets/icons/320-selector-arrow.svg" alt="dropdown" class="selector-dropdown">      
+      </div>
+      <div class="selector-animal selector-animal_active">
+        <div class="selector-animal__left">
+          <img src="../../assets/images/320-selector-alligator.png" alt="alligator">
+          <p class="selector-animal__title">Aligators</p>
+        </div>  
+          <img src="../../assets/icons/320-selector-arrow.svg" alt="dropdown" class="selector-dropdown">      
+      </div>      
+    </div>    
+  </div>
+
+  <!-- SVG for clip-path for the next section -->
+  <svg class="svg-mask" style="height: 0; width: 0; position: absolute">
+    <defs>
+      <clipPath id="aside-mask">
+        <path d="M56.3634 66.2422L56.3625 66.2426C46.6079 71.353 35.6849 74.9978 26.4409 71.8232L26.4389 71.8225C17.1919 68.7067 9.44283 58.8433 6.10629 47.1001C2.83113 35.3578 4.00025 21.8489 10.9849 13.0163C18.0321 4.12084 30.9009 -0.239575 43.0852 0.425826C55.1978 1.09062 66.5033 6.71126 73.0213 15.4431C79.5448 24.2434 81.3487 36.2349 77.9762 45.4295C74.6068 54.6159 66.1663 61.1384 56.3634 66.2422Z"></path>
+      </clipPath>
+      <clipPath id="aside-mask-640">
+        <path d="M41.7227 8.77592C45.3095 13.6337 46.3058 20.255 44.446 25.3458C42.5861 30.4365 37.9366 34.03 32.5896 36.8249C27.2758 39.6198 21.2646 41.6494 16.1501 39.886C11.0356 38.1558 6.78454 32.6991 4.95793 26.2441C3.16452 19.7892 3.79554 12.3361 7.64803 7.445C11.5337 2.52063 18.6077 0.124991 25.2831 0.490992C31.9254 0.856992 38.1359 3.95136 41.7227 8.77592Z"></path>
+      </clipPath> 
+    </defs>              
+  </svg>
+
+  <main>
+    <div class="wrapper">
+      <aside>
+        <a href="panda.html" class="aside-item">
+          <div class="aside-item__icon">
+            <div class="aside-item__border">
+              <img src="../../assets/icons/aside-border.svg" alt="border">
+            </div>
+            <div class="aside-item__image">
+              <img src="../../assets/images/aside-panda.jpg" alt="panda" title="panda">
+            </div>
+          </div>
+          <div class="aside-item__text">
+            <p>Pandas</p>
+          </div>
+        </a>
+        <a href="eagle.html" class="aside-item">
+          <div class="aside-item__icon">
+            <div class="aside-item__border">
+              <img src="../../assets/icons/aside-border.svg" alt="border">
+            </div>
+            <div class="aside-item__image">
+              <img src="../../assets/images/aside-eagle.jpg" alt="eagle" title="eagle">
+            </div>
+          </div>
+          <div class="aside-item__text">
+            <p>Eagles</p>
+          </div>
+        </a>
+        <a href="gorilla.html" class="aside-item">
+          <div class="aside-item__icon">
+            <div class="aside-item__border">
+              <img src="../../assets/icons/aside-border.svg" alt="border">
+            </div>
+            <div class="aside-item__image">
+              <img src="../../assets/images/aside-gorilla.jpg" alt="gorilla" title="gorilla">
+            </div>
+          </div>
+          <div class="aside-item__text">
+            <p>Gorillas</p>
+          </div>
+        </a>
+        <div class="aside-item aside-item_active">
+          <div class="aside-item__icon">
+            <div class="aside-item__border">
+              <img src="../../assets/icons/aside-border.svg" alt="border">
+            </div>
+            <div class="aside-item__image">
+              <img src="../../assets/images/aside-alligator.jpg" alt="aligator" title="aligator">
+            </div>
+          </div>
+          <div class="aside-item__text">
+            <p>Aligators</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="content">
+        <div class="player">
+          <div class="player__header">
+            <h2>Aligators</h2>
+            <div class="player__buttons">
+              <a href="#"><img src="../../assets/icons/button-info.svg" alt="info"></a>
+              <a href="#"><img src="../../assets/icons/button-heart.svg" alt="favorite"></a>
+            </div>
+          </div>
+          <div class="player__main-cameras">
+            <h3 class="player__subtitle">Main cameras</h3>
+            <iframe class="player__video" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="player__side-cameras">
+            <h3 class="player__subtitle">Side cameras</h3>
+            <div class="player__camera-list">
+              <div class="player__camera-wrapper">
+                <div class="player__camera-blocker"></div>
+                <p class="player__camera-live">Live</p>
+                <iframe class="player__side-camera" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="player__camera-wrapper">
+                <div class="player__camera-blocker"></div>
+                <p class="player__camera-live">Live</p>
+                <iframe class="player__side-camera" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="player__camera-wrapper">
+                <div class="player__camera-blocker"></div>
+                <p class="player__camera-live">Live</p>
+                <iframe class="player__side-camera" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="player__arrows">
+                <a href="#"><img src="../../assets/icons/arrow-right.svg" alt="arrow-right"></a>
+                <a href="#"><img src="../../assets/icons/arrow-left.svg" alt="arrow-left"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <div class="info">
+            <h2>Information</h2>
+            <ul class="info__list">
+              <li>
+                <h4 class="info__title">Zoo</h4>
+                <a href="#" class="info__link">St. Augustine's Alligator Farm Zoological Park</a>
+              </li>
+              <li>
+                <h4 class="info__title">Type of aviary</h4>
+                <p class="info__text">Imitation of the natural environment</p>
+              </li>
+              <li>
+                <h4 class="info__title">Habitat</h4>
+                <a href="#" class="info__link"> Southeastern United States and northeastern Mexico</a>
+              </li>
+              <li>
+                <h4 class="info__title">Type of food</h4>
+                <p class="info__text">Fish, amphibians, reptiles, birds, and mammals</p>
+              </li>
+              <li>
+                <h4 class="info__title">Population in the world</h4>
+                <p class="info__text">600</p>
+              </li>
+              <li>
+                <h4 class="info__title">About species</h4>
+                <p class="info__text">The yards at Shenshuping Gengda Panda Center in China's Wolong Valley are filled<br>with bamboo--making for some very happy panda residents.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="facts">
+            <h2>Interesting facts</h2>
+            <ul class="facts__list">
+              <li>
+                <p>TIt is one of two extant species in the genus Alligator within the family Alligatoridae; it is larger than the only other living alligator species, the Chinese alligator.</p>
+              </li>
+              <li>
+                <p>Adult male American alligators measure 3.4 to 4.6 m in length, and can weigh up to 453 kg . Females are smaller, measuring 2.6 to 3 m in length.</p>
+              </li>
+              <li>
+                <p>Young are born with yellow bands around their bodies and are protected by their mother for up to one year.</p>
+              </li>
+              <li>
+                <p>American alligator was listed as an endangered species by the Endangered Species Act of 1973.</p>
+              </li>
+              <li>
+                <p>The teeth number 74–80.</p>
+              </li>
+              <li>
+                <p>The American alligator was first classified by French zoologist François Marie Daudin as Crocodilus mississipiensis in 1801.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <section class="zoos-donate">
+    <div class="wrapper">
+      <img class="zoos-tree" src="../../assets/icons/tree.svg" alt="tree">
+      <img class="zoos-panda" src="../../assets/icons/panda.svg" alt="panda">
+      <img src="../../assets/icons/bamboo.svg" alt="bamboo" class="zoos-bamboo">
+      <img src="../../assets/icons/tree.svg" alt="tree" class="zoos-tree_right">
+      <a class="donate-btn" href="#">Donate to volunteers</a>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="wrapper">
+      <a class="logo logo-640" href="#"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a>
+      <nav>
+        <ul class="menu menu_left">
+          <li><a href="../main/index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a></li>        
+          <li><a href="../main/index.html">About</a></li>
+          <li><a href="../map/map.html">Map</a></li>
+          <li><a href="../zoos/panda.html">Zoos</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo" target="_blank">Design</a></li>
+        </ul>
+      </nav>
+      <div class="credits">
+        <p>Design by Lemeshko Kateryna</p>
+        <p>©RSSchool and ©Yem Digital 2021</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

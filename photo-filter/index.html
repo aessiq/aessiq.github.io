@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <title>photo-filter</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">Photo-filter</h1>
+  </header>
+  <main class="main">
+    <div class="filters">
+      <label>
+        Blur:
+        <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
+        <output name="blur">0</output>
+      </label>
+      <label>
+        Invert:
+        <input name="invert" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <output name="invert">0</output>
+      </label>
+      <label>
+        Sepia:
+        <input name="sepia" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <output name="sepia">0</output>
+      </label>
+      <label>
+        Saturate:
+        <input name="saturate" data-sizing="%" type="range" min="0" max="200" value="100" />
+        <output name="saturate">100</output>
+      </label>
+      <label>
+        Hue rotate:
+        <input name="hue" data-sizing="deg" type="range" min="0" max="360" value="0" />
+        <output name="hue">0</output>
+      </label>
+    </div>
+    <div class="editor">
+      <div class="btn-container">
+        <button class="btn btn-reset">Reset</button>
+        <button class="btn btn-next btn-active">Next picture</button>
+        <label class="btn btn-load" for="btnInput">
+          Load picture
+          <input class="btn-load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
+        </label>
+        <button class="btn btn-save">Save picture</button>
+      </div>
+      <img src="assets/img/img.jpg" alt="image"/>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <a class="github" href="#" target="_blank" rel="noopener noreferrer">github</a>
+      <a class="rss" href="https://rs.school/js/" target="_blank" rel="noopener">
+        <span class="rss-year">'21</span>
+      </a>
+    </div>
+  </footer>
+  <button class="fullscreen openfullscreen"></button>
+
+  <script>
+    const inputs = document.querySelectorAll('input[type=range]');
+    const filters = document.querySelector('.filters');
+    const resetBtn = document.querySelector('.btn-reset');
+    const loadBtn = document.querySelector('#btnInput');
+    const nextBtn = document.querySelector('.btn-next');
+    const image = document.querySelector('img');
+    image.setAttribute('crossOrigin', 'anonymous');
+    const fileInput = document.querySelector('.btn-load--input');
+    const fullscreen = document.querySelector('.fullscreen');
+    const saveBtn = document.querySelector('.btn-save');
+    let imageNumber = '00'; 
+
+    function changeImage(input) {
+      const suffix = input.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${input.name}`, `${input.value}${suffix}`);
+      let output = document.querySelector(`output[name=${input.name}]`);
+      output.value = input.value;
+    }
+
+    function reset() {
+      inputs.forEach(input => {
+        let output = document.querySelector(`output[name=${input.name}]`);
+        if (input.name == 'saturate') {
+          document.documentElement.style.setProperty(`--${input.name}`, `100%`);
+          input.value = 100;
+          output.value = 100;
+        } else {
+          document.documentElement.style.setProperty(`--${input.name}`, `0`);
+          input.value = 0;
+          output.value = 0;
+        }        
+      });
+    }
+
+    function getTime() {
+      let hour = new Date().getHours();
+      // let hour = new Date(2021, 3, 21, 18, 59).getHours(); //test Date
+      if (hour >=6 && hour < 12) return 'morning';
+      if (hour >=12 && hour < 18) return 'day';
+      if (hour >=18 && hour < 24) return 'evening';
+      if (hour >=0 && hour < 6) return 'night';      
+    }
+
+    filters.addEventListener('input', (event) => {
+      if (event.target.matches('input[type=range]')) {
+        changeImage(event.target);
+      }
+    });
+    
+    resetBtn.addEventListener('click', () => {
+      reset();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      ++imageNumber;
+      if (imageNumber < 10) imageNumber = '0' + imageNumber;
+      if (imageNumber > 20) imageNumber = '01';
+      image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${getTime()}/${imageNumber}.jpg`;
+    });
+
+    fileInput.addEventListener('change', (event) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        image.src = reader.result;
+      }
+      reader.readAsDataURL(fileInput.files[0]);
+      fileInput.value = null;
+    });
+
+    fullscreen.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    });
+
+    saveBtn.addEventListener('click', () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      let containerDiagonal = Math.pow( Math.pow(image.width, 2) + Math.pow(image.height, 2), 0.5);
+      let imageDiagonal = Math.pow( Math.pow(image.naturalWidth, 2) + Math.pow(image.naturalHeight, 2), 0.5);
+      let k = imageDiagonal/containerDiagonal;
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      ctx.filter = `blur(${document.querySelector('input[name=blur]').value * k}px) invert(${document.querySelector('input[name=invert]').value}%) sepia(${document.querySelector('input[name=sepia]').value}%) saturate(${document.querySelector('input[name=saturate]').value}%) hue-rotate(${document.querySelector('input[name=hue]').value}deg)`;
+      ctx.drawImage(image, 0, 0);
+      let link = document.createElement('a');
+      link.download = 'download.png';
+      link.href = canvas.toDataURL().replace("image/png", "image/octet-stream");
+      link.click();
+      link.delete;
+      canvas.delete;
+    });
+  </script>
+</body>
+</html>

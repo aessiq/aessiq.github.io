@@ -1,0 +1,370 @@
+.mobile-menu {
+  display: none;
+}
+
+.tooltip .watch-640 {
+  display: none;
+}
+
+.map-icon:hover > .tooltip .watch-640 {
+  display: none;
+}
+
+.logo-640 {
+  display: none;
+}
+
+@media screen and (max-width:1919px) {
+
+  .wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+
+  header {
+    padding-left: 0;
+  }
+  
+  .menu_left li + li {
+    margin-left: 45px;
+  }
+
+  .menu_right {
+    left: -9px;
+  }
+
+  .menu .log-in,
+  .menu .sign-up {
+    display: none;
+  }
+
+  .menu .profile {
+    display: block;
+  }
+
+  .menu_right > li:last-child {
+    padding: 0;
+    border: 0;
+    margin-left: 30px;
+  }
+
+  h2 {
+    left: -9px;
+    letter-spacing: -0.2px;
+  }
+
+  /* Main */
+
+  main {
+    margin-top: 18px;
+  }
+
+  .map {
+    background-image: url(../../assets/icons/1200-map.svg);
+    background-repeat: no-repeat;
+    background-position: top 53px left 25px;
+    position: relative;
+    height: 785px;
+  }
+
+  .map-icon_eagle {
+    top: 307px;
+    left: 102px;
+  }
+
+  .map-icon_alligator {
+    top: 373px;
+    left: 235px;
+  }
+
+  .map-icon_gorilla {
+    top: 469px;
+    left: 528px;
+  }
+
+  .map-icon_panda {
+    top: 370px;
+    left: 770px;
+  }
+
+  .zoom {
+    bottom: 7px;
+    right: 20px;
+  }
+
+  /* Footer */
+
+  footer {
+    margin-top: 17px;
+    height: 120px;
+    padding-left: 0;
+  }
+
+  footer ul li:nth-child(1) {
+    margin-right: 72px;
+  }
+
+  footer ul li:not(:first-child) {
+    margin-right: 43px;
+  }
+
+  .credits {
+    font-size: 12px;
+    line-height: 14px;
+    position: static;
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+  
+  .wrapper {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+
+  header {
+    height: 78px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 49px;
+    height: 38px;
+  }
+
+  .burger-button {
+    height: 35px;
+    position: relative;
+    right: 13px;
+    top: 4px;
+    cursor: pointer;
+  }
+
+  .burger-line {
+    width: 25px;
+    border: 1px solid #C5E1E6;
+    border-radius: 10px;
+    margin-bottom: 7px;
+  }
+
+  /* Map */
+
+  main {
+    margin-top: 78px;
+    height: 545px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 21px;
+    left: -1px;
+    top: 16px;
+    letter-spacing: normal;
+  }
+
+  .map {
+    margin-top: 88px;
+    background: url(../../assets/icons/640-map.svg) top 0px left -4px no-repeat;
+    height: 397px;
+  }
+
+  .map-icon__wrapper {
+    transform: scale(0.7);
+  }
+
+  .map-icon_eagle {
+    top: 132px;
+    left: 13px;
+  }
+
+  .map-icon_alligator {
+    top: 167px;
+    left: 96px;
+  }
+
+  .map-icon_gorilla {
+    top: 201px;
+    left: 248px;
+  }
+
+  .map-icon_panda {
+    top: 141px;
+    left: 373px;
+  }
+
+  .zoom {
+    bottom: -5px;
+    right: 16px;
+  }
+
+  .tooltip {
+    top: -80px;
+}
+
+
+  .tooltip .watch-640 {
+    width: 150px;
+    margin: 0 auto;
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1.5px solid #19707D;
+    border-radius: 100px;
+    padding: 8px 10px;
+  }
+
+  .map-icon:hover > .tooltip {
+    width: 194px;
+    height: 120px;
+  }
+
+  .map-icon:hover > .tooltip .watch-640{
+    display: block;
+  }
+
+
+  /* Footer */
+
+  footer {
+    height: 78px;
+    margin-top: -16px;
+  }
+
+  footer nav {
+    display: none;
+  }
+
+  .credits {
+    font-size: 10px;
+    line-height: 12px;
+    position: relative;
+    left: 6px;
+    top: 4px;
+  }
+
+  .credits > p {
+    margin-bottom: 5px;
+  }
+
+  .logo-640 {
+    display: block;
+    position: relative;
+    top: 4px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+
+  .wrapper {
+    width: 300px;
+  }
+
+  /* Header */
+
+  header {
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .burger-button {
+    right: 17px;
+    top: 2px;
+  }
+
+  header .logo {
+    position: relative;
+    left: 6px;
+  }
+
+  /* Main */
+
+  main {
+    margin-top: 50px;
+    height: 490px;
+    overflow-x: hidden;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .map {
+    margin-top: 38px;
+    background: url(../../assets/icons/320-map.svg) top 14px left 0px no-repeat;
+  }
+
+  .map-icon_eagle {
+    top: 151px;
+    left: 11px;
+  }
+
+  .map-icon_alligator {
+    top: 183px;
+    left: 99px;
+  }
+
+  .map-icon_gorilla {
+    top: 213px;
+    left: 250px;
+  }
+
+  .map-icon_panda {
+    display: none;
+  }
+
+  .zoom {
+    bottom: -14px;
+    right: 12px;
+  }
+
+  /* Footer */
+
+  footer {
+    height: 78px;
+  }
+
+  footer .logo {
+    position: relative;
+    top: 4px;
+    left: 10px;
+  }
+  
+  .credits {
+    left: 0px;
+    top: 4px;
+  }
+
+}

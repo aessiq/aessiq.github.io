@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="map.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;500&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="map-media.css">
+  <title>Map</title>
+</head>
+<body>
+
+  <header>
+    <h1 class="hidden-h1">Online Zoo</h1>
+    <div class="wrapper">
+      <div class="mobile-menu">
+        <a class="logo" href="../main/index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a>
+        <div class="burger-button">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+        </div>
+      </div>
+      <nav>
+        <ul class="menu menu_left">
+          <li><a href="../main/index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a></li>        
+          <li><a href="../main/index.html">About</a></li>
+          <li><a class="menu_active" href="#">Map</a></li>
+          <li><a href="../zoos/panda.html">Zoos</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo" target="_blank">Design</a></li>
+        </ul>
+        <ul class="menu menu_right">
+          <div class="search">
+            <input type="text" placeholder="hello :D">
+            <li><a href="#"><img src="../../assets/icons/search.svg" alt="search"></a></li>
+          </div>          
+          <li class="log-in"><a href="#">Log in</a></li>
+          <li class="sign-up"><a href="#">Sign up</a></li>
+          <li class="profile"><a href="#"><img src="../../assets/images/avatar-default.png" alt="avatar-default"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SVG for clip-path for the next section -->
+  <svg class="svg-mask" style="height: 0; width: 0">
+    <defs>
+      <clipPath id="map-mask">
+        <path d="M66.5743 14.6278C72.9044 23.1671 74.6628 34.8064 71.3805 43.7552C68.0982 52.704 59.8925 59.0208 50.4559 63.9338C41.078 68.8469 30.4692 72.4147 21.4429 69.3148C12.4166 66.2734 4.91425 56.6812 1.69058 45.3344C-1.47448 33.9876 -0.360846 20.8861 6.43817 12.2882C13.2958 3.63189 25.7802 -0.579307 37.5612 0.0640697C49.2837 0.707446 60.2441 6.1469 66.5743 14.6278Z"></path>
+      </clipPath>
+    </defs>              
+  </svg>
+
+  <main>
+    <div class="wrapper">
+      <h2>Choose your favorite Animal</h2>
+      <div class="map-wrapper">
+        <div class="map">
+          <a href="../zoos/eagle.html" class="map-icon map-icon_eagle">
+            <div class="tooltip">
+              <p>Eagle</p>
+              <p>California, USA</p>
+              <p class="watch-640">Watch online</p>
+            </div>
+            <div class="map-icon__wrapper">
+              <div class="map-icon__border">
+                <img src="../../assets/icons/map-icon-border.svg" alt="border">
+              </div>
+              <div class="map-icon__image">
+                <img src="../../assets/images/map-icon-eagle.jpg" alt="eagle">
+              </div>
+            </div>          
+          </a>
+          <a href="../zoos/aligator.html" class="map-icon map-icon_alligator">
+            <div class="tooltip">
+              <p>Alligator</p>
+              <p>Florida, USA</p>
+              <p class="watch-640">Watch online</p>
+            </div>
+            <div class="map-icon__wrapper">
+              <div class="map-icon__border">
+                <img src="../../assets/icons/map-icon-border.svg" alt="border">
+              </div>
+              <div class="map-icon__image">
+                <img src="../../assets/images/map-icon-alligator.jpg" alt="alligator">
+              </div>
+            </div>
+          </a>
+          <a href="../zoos/gorilla.html" class="map-icon map-icon_gorilla">
+            <div class="tooltip">
+              <p>Gorilla</p>
+              <p>Katoyo, Democratic Republic of Congo</p>
+              <p class="watch-640">Watch online</p>
+            </div>
+            <div class="map-icon__wrapper">
+              <div class="map-icon__border">
+                <img src="../../assets/icons/map-icon-border.svg" alt="border">
+              </div>
+              <div class="map-icon__image">
+                <img src="../../assets/images/map-icon-gorilla.jpg" alt="gorilla">
+              </div>
+            </div>
+          </a>
+          <a href="../zoos/panda.html" class="map-icon map-icon_panda">
+            <div class="tooltip">
+              <p>Panda</p>
+              <p>Sichuan, China</p>
+              <p class="watch-640">Watch online</p>
+            </div>
+            <div class="map-icon__wrapper">
+              <div class="map-icon__border">
+                <img src="../../assets/icons/map-icon-border.svg" alt="border">
+              </div>
+              <div class="map-icon__image">
+                <img src="../../assets/images/map-icon-panda.jpg" alt="panda">
+              </div>
+            </div>
+          </a>
+        </div>  
+      </div>
+      <div class="zoom">
+        <a class="zoom__button zoom-in"><img src="../../assets/icons/map-zoom-plus.svg" alt="zoom in"></a>
+        <a class="zoom__button zoom-out"><img src="../../assets/icons/map-zoom-minus.svg" alt="zoom out"></a>
+      </div>    
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <a class="logo logo-640" href="#"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a>
+      <nav>
+        <ul class="menu menu_left">
+          <li><a href="../main/index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a></li>        
+          <li><a href="../main/index.html">About</a></li>
+          <li><a href="#">Map</a></li>
+          <li><a href="../zoos/panda.html">Zoos</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo" target="_blank">Design</a></li>
+        </ul>
+      </nav>
+      <div class="credits">
+        <p>Design by Lemeshko Kateryna</p>
+        <p>©RSSchool and ©Yem Digital 2021</p>
+      </div>
+    </div>
+  </footer>
+<script src="map.js"></script>
+</body>
+</html>

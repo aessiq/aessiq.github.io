@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Zoo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;500&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index-media.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="mobile-menu">
+        <a class="logo" href="index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a>
+        <div class="burger-button">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+        </div>
+      </div>
+      <nav>
+        <ul class="menu menu_left">
+          <li><a href="index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a></li>        
+          <li><a class="menu_active" href="index.html">About</a></li>
+          <li><a href="../map/map.html">Map</a></li>
+          <li><a href="../zoos/panda.html">Zoos</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo" target="_blank">Design</a></li>
+        </ul>
+        <ul class="menu menu_right">
+          <div class="search">
+            <input type="text" placeholder="hello :D">
+            <li><a href="#"><img src="../../assets/icons/search.svg" alt="search"></a></li>
+          </div>          
+          <li class="log-in"><a href="#">Log in</a></li>
+          <li class="username hidden"><a href="#"><img class="username-title" src="../../assets/images/avatar-default.png" alt="avatar-default" title="User"></a></li>
+          <li class="log-out hidden"><a>Log out</a></li>
+          <li class="sign-up"><a href="#">Sign up</a></li>
+          <li class="profile"><a href="#"><img src="../../assets/images/avatar-default.png" alt="avatar-default"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrapper">
+      <div class="hero__text">
+        <h1>Watch your favorite <span>animals online</span></h1>
+        <p class="text">Observe different animals from around the world online in live time. Help vulunteers to take a good care of animals, donate to your favorite ones.</p>
+        <a class="hero__watch-now" href="../zoos/panda.html">Watch now</a>
+        <a class="hero__donate" href="#">Donate</a>
+      </div>
+      <div class="hero__image">
+        <a href="../zoos/panda.html"><img src="../../assets/images/hero-image.png" alt="panda"></a>
+        <a href="../zoos/panda.html"><img class="play-button" src="../../assets/icons/play-button.svg" alt="play"></a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="how-it-works">
+    <div class="wrapper">
+      <h2>How it works</h2>
+      <div class="container">
+        <div class="container__item">
+          <div class="container__img-container">
+            <img src="../../assets/icons/binocle.svg" alt="binocle">
+          </div>
+          <p class="container__text text">Keep an eye on your favourite animals online</p>
+        </div>
+        <div class="container__item">
+          <div class="container__img-container">
+            <img src="../../assets/icons/heart.svg" alt="heart">
+          </div>          
+          <p class="container__text text">Become a part of the communtity</p>
+        </div>
+        <div class="container__item">
+          <div class="container__img-container">
+            <img src="../../assets/icons/support.svg" alt="support">
+          </div>          
+          <p class="container__text text">Support animals with the donations</p>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <section class="mid-bg">
+    <div class="mid-bg__bamboo">
+      <img src="../../assets/icons/bamboo.svg" alt="bamboo">
+    </div>
+    <div class="mid-bg__tree">
+      <img src="../../assets/icons/tree.svg" alt="tree">
+    </div>
+    <div class="mid-bg__tree_small">
+      <img src="../../assets/icons/tree.svg" alt="tree">
+    </div>
+    <div class="mid-bg__panda">
+      <img src="../../assets/icons/panda.svg" alt="panda">
+    </div>
+    <div class="mid-bg__bamboo_big">
+      <img src="../../assets/icons/bamboo.svg" alt="bamboo">
+    </div>
+    <div class="mid-bg__tree_big">
+      <img src="../../assets/icons/tree.svg" alt="tree">
+    </div>
+  </section>
+  <!-- Adding svg for masks for the next section -->
+  <svg class="svg-mask" style="height: 0; width: 0">
+    <defs>
+      <clipPath id="mask">
+        <path d="M208.771 45.8713C228.621 72.65 234.135 109.15 223.842 137.212C213.549 165.275 187.817 185.084 158.225 200.49C128.817 215.897 95.5484 227.086 67.2429 217.365C38.9373 207.827 15.4106 177.747 5.30151 142.164C-4.62382 106.582 -1.13158 65.4968 20.1895 38.5347C41.6944 11.3893 80.8442 -1.81665 117.788 0.200917C154.549 2.21848 188.92 19.2761 208.771 45.8713Z"></path>        
+      </clipPath>      
+      <clipPath id="mask-rotated">
+        <path d="M176.812 204.371C150.178 224.422 113.719 230.203 85.5826 220.11C57.446 210.018 37.4509 184.421 21.8296 154.931C6.20969 125.625 -5.21984 92.4278 4.29545 64.0427C13.6273 35.659 43.5359 11.9065 79.0441 1.53595C114.554 -8.65073 155.663 -5.4555 182.779 15.6767C210.08 36.9914 223.57 76.0579 221.82 113.029C220.07 149.815 203.262 184.321 176.812 204.371Z"></path>
+      </clipPath>
+      <clipPath id="small-mask">
+        <path d="M56.3634 66.2422L56.3625 66.2426C46.6079 71.353 35.6849 74.9978 26.4409 71.8232L26.4389 71.8225C17.1919 68.7067 9.44281 58.8433 6.10627 47.1C2.83116 35.3579 4.00024 21.8491 10.9847 13.0166C18.0319 4.12092 30.9008 -0.239581 43.0852 0.425826C55.1983 1.09064 66.5041 6.71167 73.022 15.444C79.545 24.2443 81.3485 36.2353 77.9762 45.4295C74.6068 54.6159 66.1663 61.1384 56.3634 66.2422Z"></path>
+      </clipPath>
+      <clipPath id="1200-mask">
+        <path d="M149.308 33.4258C163.418 52.4603 167.338 78.4045 160.021 98.3516C152.705 118.299 134.414 132.379 113.38 143.33C92.4761 154.282 68.8288 162.234 48.7089 155.325C28.5891 148.545 11.8661 127.164 4.68046 101.872C-2.37454 76.5793 0.107773 47.3757 15.263 28.2109C30.5488 8.91564 58.3769 -0.471223 84.6372 0.962882C110.767 2.39699 135.198 14.5217 149.308 33.4258Z"></path>
+      </clipPath>        
+    </defs>              
+  </svg>
+
+  <section class="pets-in-zoo">
+    <div class="wrapper">
+      <div class="pets-in-zoo__header">
+        <h2>Pets in zoo</h2>
+        <a href="../map/map.html" class="choose-your-favorite">
+          <img src="../../assets/icons/favorite.svg" alt="heart">
+          <span class="bttn-text">Choose your favorite</span>
+        </a>
+      </div>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <a href="../zoos/panda.html" class="slider-card">
+            <div class="slider-card__image">
+              <div class="slider-card__image_wrapper">
+                <img src="../../assets/images/panda.jpg" alt="panda">
+              </div>
+            </div>
+            <div class="slider-card__bottom">
+              <div class="slider-card__text">
+                <p class="slider-card__title">Pandas</p>
+                <p class="slider-card__subtitle">Shenshuping Gengda Panda Center</p>
+              </div>
+              <img class="slider-card__tv" src="../../assets/icons/tv.svg" alt="tv">
+            </div>
+          </a>
+          <a href="../zoos/eagle.html" class="slider-card">
+            <div class="slider-card__image">
+              <div class="slider-card__image_wrapper">
+                <img src="../../assets/images/eagle.jpg" alt="eagle">
+              </div>
+            </div>
+            <div class="slider-card__bottom">
+              <div class="slider-card__text">
+                <p class="slider-card__title">Eagles</p>
+                <p class="slider-card__subtitle">Catalina Island</p>
+              </div>
+              <img class="slider-card__tv" src="../../assets/icons/tv.svg" alt="tv">
+            </div>
+          </a>
+          <a href="../zoos/gorilla.html" class="slider-card">
+            <div class="slider-card__image">
+              <div class="slider-card__image_wrapper">
+                <img src="../../assets/images/gorilla.jpg" alt="gorilla">
+              </div>
+            </div>
+            <div class="slider-card__bottom">
+              <div class="slider-card__text">
+                <p class="slider-card__title">Gorillas</p>
+                <p class="slider-card__subtitle">GRACE gorillas</p>
+              </div>
+              <img class="slider-card__tv" src="../../assets/icons/tv.svg" alt="tv">
+            </div>
+          </a>
+          <a href="../zoos/aligator.html" class="slider-card">
+            <div class="slider-card__image">
+              <div class="slider-card__image_wrapper">
+                <img src="../../assets/images/alligator.jpg" alt="alligator">
+              </div>
+            </div>
+            <div class="slider-card__bottom">
+              <div class="slider-card__text">
+                <p class="slider-card__title">Aligators</p>
+                <p class="slider-card__subtitle">St. Augustine's Alligator Farm Zoological Park</p>
+              </div>
+              <img class="slider-card__tv" src="../../assets/icons/tv.svg" alt="tv">
+            </div>
+          </a>
+          <a href="#" class="slider-card">
+            <div class="slider-card__image">
+              <div class="slider-card__image_wrapper">
+                <img src="../../assets/images/elephant.jpg" alt="elephant">
+              </div>            
+            </div>
+            <div class="slider-card__bottom">
+              <div class="slider-card__text">
+                <p class="slider-card__title">Elephants</p>
+                <p class="slider-card__subtitle">Tembe Elephant Park</p>
+              </div>
+              <img class="slider-card__tv" src="../../assets/icons/tv.svg" alt="tv">
+            </div>
+          </a>
+          <a href="#" class="slider-card">
+            <div class="slider-card__image">
+              <div class="slider-card__image_wrapper">
+                <img src="../../assets/images/lemur.jpg" alt="lemur">
+              </div>            
+            </div>
+            <div class="slider-card__bottom">
+              <div class="slider-card__text">
+                <p class="slider-card__title">Lemurs</p>
+                <p class="slider-card__subtitle">Madagascar</p>
+              </div>
+              <img class="slider-card__tv" src="../../assets/icons/tv.svg" alt="tv">
+            </div>
+          </a>
+        </div>
+      </div>     
+      <a class="pets-in-zoo-arrow-right arrow-right"><img src="../../assets/icons/arrow-right.svg" alt="arrow-right"></a>
+      <a class="pets-in-zoo-arrow-left arrow-left"><img src="../../assets/icons/arrow-left.svg" alt="arrow-left"></a>
+      <img class="pets-in-zoo__penguin" src="../../assets/icons/penguin.svg" alt="penguin">
+    </div>
+  </section>
+
+  <section class="pay-and-feed">
+    <div class="pay-and-feed__tree">
+      <img src="../../assets/icons/tree.svg" alt="tree">
+    </div>
+    <div class="pay-and-feed__bamboo">
+      <img src="../../assets/icons/bamboo.svg" alt="bamboo">
+    </div>
+    <div class="wrapper">
+      <div class="pay-and-feed__header">
+        <h2>Pay and feed</h2>
+        <a href="#">
+          Donate to volunteers
+        </a>
+      </div>
+      <div class="container">
+        <div class="container__item">
+          <div class="container__img-container">
+            <img src="../../assets/icons/donate.svg" alt="donate">
+          </div>
+          <p class="container__text text">You donate to your favourite animals </p>
+        </div>
+        <div class="container__item">
+          <div class="container__img-container">
+            <img src="../../assets/icons/food.svg" alt="food">
+          </div>
+          <p class="container__text text">Zoo Keepers feed animals with their favourite food</p>
+        </div>
+        <div class="container__item">
+          <div class="container__img-container">
+            <img src="../../assets/icons/monkey.svg" alt="monkey">
+          </div>
+          <p class="container__text text">Animals are healthy and happy</p>
+        </div>
+      </div>      
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="wrapper">
+      <div class="testimonials__header">
+        <h2>testimonials</h2>
+        <a>
+          <div class="leave-feedback">
+            <img src="../../assets/icons/feedback.svg" alt="feedback">
+            <span class="bttn-text">Leave feedback</span>
+          </div>
+        </a>
+      </div>
+      <div class="comments">
+        <div class="comment">
+          <div class="comment__top">
+            <p class="comment__date">20 December 2020</p>
+            <p class="comment__text">Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+          </div>
+          <div class="comment__bottom">
+            <img src="../../assets/images/avatar-adam.png" alt="avatar">
+            <span class="comment__author">Adam, Spain</span>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="comment__top">
+            <p class="comment__date">20 December 2020</p>
+            <p class="comment__text">Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+          </div>
+          <div class="comment__bottom">
+            <img src="../../assets/images/avatar-chris.png" alt="avatar">
+            <span class="comment__author">Chris, Australia</span>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="comment__top">
+            <p class="comment__date">20 December 2020</p>
+            <p class="comment__text">Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+          </div>
+          <div class="comment__bottom">
+            <img src="../../assets/images/avatar-amely.png" alt="avatar">
+            <span class="comment__author">Amely, USA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="look-at-animals">
+    <div class="wrapper">
+        <h2>Look at this beautiful animals</h2>
+        <div class="look-at-animals__slider-wrapper">
+          <div class="look-at-animals__slider">
+            <a href="../zoos/panda.html" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-panda.png" alt="panda">
+                  </div>
+                </div>
+              </div>            
+              <p>Pandas</p>
+            </a>
+            <a href="../zoos/gorilla.html" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-gorilla.png" alt="gorilla">
+                  </div>
+                </div>                
+              </div>            
+              <p>Gorillas</p>
+            </a>
+            <a href="../zoos/eagle.html" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-eagle.png" alt="eagle">
+                  </div>
+                </div>
+              </div>            
+              <p>Eagles</p>
+            </a>
+            <a href="../zoos/aligator.html" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-alligator.png" alt="alligator">
+                  </div>
+                </div>
+              </div>            
+              <p>Alligators</p>
+            </a>
+            <a href="#" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-elephant.png" alt="elephant">
+                  </div>
+                </div>
+              </div>            
+              <p>Elephants</p>
+            </a>
+            <a href="#" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-lemur.png" alt="lemur">
+                  </div>
+                </div>
+              </div>            
+              <p>Lemurs</p>
+            </a>
+            <a href="../zoos/panda.html" class="look-at-animals__item hidden-item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-panda.png" alt="panda">
+                  </div>
+                </div>
+              </div>            
+              <p>Pandas</p>
+            </a>
+            <a href="../zoos/gorilla.html" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-gorilla.png" alt="gorilla">
+                  </div>
+                </div>                
+              </div>            
+              <p>Gorillas</p>
+            </a>
+            <a href="../zoos/eagle.html" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-eagle.png" alt="eagle">
+                  </div>
+                </div>
+              </div>            
+              <p>Eagles</p>
+            </a>
+            <a href="../zoos/aligator.html" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-alligator.png" alt="alligator">
+                  </div>
+                </div>
+              </div>            
+              <p>Alligators</p>
+            </a>
+            <a href="#" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-elephant.png" alt="elephant">
+                  </div>
+                </div>
+              </div>            
+              <p>Elephants</p>
+            </a>
+            <a href="#" class="look-at-animals__item">
+              <div class="look-at-animals__image">
+                <div class="look-at-animals__image_outer">
+                  <div class="look-at-animals__image_inner">
+                    <img src="../../assets/images/small-lemur.png" alt="lemur">
+                  </div>
+                </div>
+              </div>            
+              <p>Lemurs</p>
+            </a>  
+          </div>
+          <a class="look-at-animals__arrow-right">
+            <img src="../../assets/icons/arrow-right.svg" alt="arrow-right">
+          </a>
+          <a class="look-at-animals__arrow-left">
+            <img src="../../assets/icons/arrow-left.svg" alt="arrow-left">
+          </a>
+        </div>
+    </div>    
+  </section>
+
+  <footer>
+    <div class="wrapper">
+      <a class="logo logo-640" href="#"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a>
+      <nav>
+        <ul class="menu menu_left">
+          <li><a href="index.html"><img src="../../assets/icons/logo.svg" alt="Online Zoo logo"></a></li>        
+          <li><a href="index.html">About</a></li>
+          <li><a href="../map/map.html">Map</a></li>
+          <li><a href="../zoos/panda.html">Zoos</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo" target="_blank">Design</a></li>
+        </ul>
+      </nav>
+      <div class="credits">
+        <p>Design by Lemeshko Kateryna</p>
+        <p>©RSSchool and ©Yem Digital 2021</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal hidden">
+    <div class="create-account">
+      <div class="create-account__header">
+        <img src="../../assets/images/modal-logo.png" alt="modal-logo">
+      </div>
+      <div class="create-account-switch">
+        <a href="#" data-signup class="create-account-switch__title create-account-switch__title_active">Create account</a>
+        <a href="#" data-login class="create-account-switch__title">Log in</a>
+      </div>
+      <div class="socials-sign-in">
+        <a class="socials-sign-in-button socials-sign-in-button_google">
+          <img class="socials-sign-in-button__logo" src="../../assets/icons/google-logo.png" alt="google-logo">
+          <span class="socials-sign-in-button__text">Google Sign In</span>
+        </a>
+        <a class="socials-sign-in-button socials-sign-in-button_facebook">
+          <img class="socials-sign-in-button__logo" src="../../assets/icons/facebook-logo.png" alt="facebook-logo">
+          <span class="socials-sign-in-button__text">Facebook Sign In</span>
+        </a>
+      </div>
+      <form action="#" autocomplete="off" class="create-account-form hidden">
+        <label class="create-account-form__title full-width" for="create-account-form__name">Name</label>
+        <input class="create-account-form__field full-width" type="text" name="create-account-form__name" id="create-account-form__name" required>
+        <label class="create-account-form__title full-width" for="create-account-form__email">Email</label>
+        <input class="create-account-form__field full-width" type="email" name="create-account-form__email" id="create-account-form__email" required>
+        <label class="create-account-form__title full-width" for="create-account-form__password">Password</label>
+        <input data-password class="create-account-form__field full-width" type="password" name="create-account-form__password" id="create-account-form__password" required>
+        <input type="checkbox" name="create-account-form__agree" id="create-account-form__agree" required>
+        <label class="create-account-form__agree" for="create-account-form__agree">Agree with the <a href="#">User Agreement</a>  and <a href="#">Privacy Policy</a></label>
+        <input data-submit class="create-account-form__submit form__submit_inactive full-width" type="submit" value="Send">
+      </form>
+      <form action="#" autocomplete="off" class="login-form hidden">
+        <label class="login-form__title full-width" for="login-form__email">Email</label>
+        <input class="login-form__field full-width" type="email" name="login-form__email" id="login-form__email" required>
+        <label class="login-form__title full-width" for="login-form__password">Password</label>
+        <input data-password class="login-form__field full-width" type="password" name="login-form__password" id="login-form__password" required>
+        <input data-submit class="login-form__submit form__submit_inactive full-width" type="submit" value="Send">
+      </form>
+    </div>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>

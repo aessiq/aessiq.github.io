@@ -1,0 +1,362 @@
+:root {
+  --black: #0D444D;
+  --bamboo-tree: #216E7A;
+  --white: #C5E1E5;
+  --bg: #2A8086;
+  --hero-text: #F3F7F8;
+  --bttn-black: #0D444D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2A8086;
+}
+
+.wrapper {
+  max-width: 1480px;  
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  height: 110px;
+  padding-top: 10px;
+  padding-left: 15px;
+  background-color: #2A8086;
+  filter: drop-shadow(0px 1px 10px rgba(18, 87, 91, 0.25));
+}
+
+.hidden-h1 {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu_left li + li {
+  margin-left: 53px;
+}
+
+.menu_left a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.menu_active {
+  border-bottom: 2px solid var(--white);
+  pointer-events: none;
+}
+
+.menu_right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 133px;
+}
+
+.menu_right > li {
+  margin-left: 40px;
+}
+
+.menu_right a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.sign-up {
+  padding: 15px;
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  margin-left: 23px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  background-color: var(--white);
+  color: var(--black);
+  width: 0px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.search:hover input {
+  width: 200px;
+  padding: 0 10px;
+}
+
+.search a {
+  margin-left: 5px;
+}
+
+.menu .profile {
+  display: none;
+}
+
+/* Map */
+
+main {
+  margin-top: 9px;
+  max-width: 1920px;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  left: 7px;
+}
+
+.map-wrapper {
+  position: relative;
+  height: 968px;
+  overflow: hidden;
+}
+
+.map {
+  background-image: url(../../assets/images/map.svg);
+  background-repeat: no-repeat;
+  background-position: top 54px left 15px;
+  position: relative;
+  height: 968px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.map-icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.map-icon__wrapper {
+  transition: .5s;
+}
+
+.map-icon__border {
+  transition: .5s;
+}
+
+.map-icon__image {
+  clip-path: url(#map-mask);
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  transition: .5s;
+}
+
+.map-icon__image img {
+  transition: .5s;
+}
+
+.map-icon:hover .map-icon__wrapper {
+  transform: rotate(360deg);
+}
+
+.map-icon:hover .map-icon__image img {
+  transform: rotate(-360deg);
+}
+/* Uncomment the following 2 rules if you want clip-path and border rotating similtaniously  = vesrion 2 or the rotating*/
+/* .map-icon:hover .map-icon__border,
+.map-icon:hover .map-icon__image {
+  transform: rotate(360deg);
+}
+
+.map-icon:hover .map-icon__image img{
+  transform: rotate(-360deg);
+} */
+
+/* Uncomment the following if you don't want to clip-path rotate too = image static and rotating border = version 3 of the rotating*/
+
+/* .map-icon:hover .map-icon__border {
+  transform: rotate(360deg);
+} */
+
+.map-icon_eagle {
+  top: 412px;
+  left: 178px;
+}
+
+.map-icon_alligator {
+  top: 482px;
+  left: 333px;
+}
+
+.map-icon_gorilla {
+  top: 583px;
+  left: 695px;
+}
+
+.map-icon_panda {
+  top: 447px;
+  left: 1040px;
+}
+
+.tooltip {
+  width: 0;
+  position: absolute;
+  background: #fff;
+  padding-top: 24px;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  top: -60px;
+  left: 50px;
+  transition: .5s;
+}
+
+.tooltip p {
+  display: none;
+  font-size: 0;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  color: #0D444D;
+  transition: .5s;
+}
+
+.tooltip:after {
+  content:"";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.map-icon:hover > .tooltip {
+  width: 410px;
+  height: 90px;
+}
+
+.map-icon:hover > .tooltip p{
+  display: block;
+  font-size: 14px;
+}
+
+.map-icon:hover > .tooltip:after{
+  border-width: 18px 18px 0 18px;
+}
+
+.zoom {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  bottom: 9px;
+  right: 50px;
+  z-index: 2;
+}
+
+.zoom__button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1.5px solid #FFFFFF;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.zoom__button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 17px;
+  height: 201px;
+  background: #196469;
+  position: relative;
+  padding-left: 15px;
+}
+
+footer .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer ul li:nth-child(1){
+  margin-right: 78px;
+}
+
+footer ul li:not(:first-child){
+  margin-right: 53px;
+  margin-left: 0;
+}
+
+.credits {
+  position: relative;
+  top: 22px;
+  left: 129px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.credits > p {
+  margin-bottom: 10px;
+}
