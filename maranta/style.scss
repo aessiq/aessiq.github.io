@@ -1,24 +1,25 @@
-$green_rgba: rgba(6,64,52,.5);
+// $green_rgba: rgba(6,64,52,.5);
+// $beige_rgba: rgba(226,213,195,.5);
 $green_hex: #064034;
 $beige_hex: #e2d5c2;
-$beige_rgba: rgba(226,213,195,.5);
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-}
-:root {
   font-family: 'Comfortaa', sans-serif;
 }
+
 .wrapper {
   width: 1200px;
   margin: 0 auto;
 }
+
 .section {
   padding: 80px 0;
 }
+
 .section-title {
   font-size: 3rem;
   text-align: center;
@@ -42,7 +43,7 @@ $beige_rgba: rgba(226,213,195,.5);
   display: flex;
   list-style-type: none;
   gap: 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .nav-item {
@@ -108,18 +109,17 @@ $beige_rgba: rgba(226,213,195,.5);
 
 .about-card__image {
   width: 45%;
-  height: 500px;
+  height: 600px;
+  background-image: url(./img/food1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 // Menu
 
 .menu {
-  color: white;
+  color: $beige_hex;
   background-color: $green_hex;
-}
-
-.menu-title {
-  color: white;
 }
 
 .menu-text {
@@ -161,7 +161,7 @@ $beige_rgba: rgba(226,213,195,.5);
   transition: 0.1s;
   border-radius: 30px;
   padding: 20px 10px;
-  background-color: rgba(123, 189, 38, 0.7);
+  background-color: rgba(6,64,52,.8);
   &:hover {
     transform: scale(1.1);
   }
@@ -196,13 +196,96 @@ $beige_rgba: rgba(226,213,195,.5);
   color: $green_hex;
 }
 
-// .map-address-title, .map-address-text, .map-phone, .map-email, .map-hours-title, .map-hours-text, .map-insta-link {
-//   margin-bottom: 15px;
-// }
-
 .map-yandex {
   width: 45%;
   height: 500px;
+}
+
+// Фото
+
+.photo {
+  background-color: $green_hex;
+  color: $beige_hex;
+}
+
+.photo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.photo-slider-image {
+  width: 80%;
+}
+
+.fa-arrow-left, .fa-arrow-right {
+  font-size: 2rem;
+  color: $beige_hex;
+  cursor: pointer;
+}
+
+// Команда
+
+.team {
+  background-color: $beige_hex;
+  color: $green_hex;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.team-photo {
+  height: 500px;
+  width: 45%;
+  background-image: url(./img/team_chef.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.team-text {
+  width: 45%;
+  line-height: 2;
+  color: $green_hex;
+}
+
+// Банкеты
+
+.banket {
+  background-color: $green_hex;
+  color: $beige_hex;
+}
+
+.banket-text {
+  line-height: 2;
+}
+
+// Забронировать
+
+.book {
+  background-color: $beige_hex;
+  color: $green_hex;
+}
+
+.book-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.book-text {
+  color: $green_hex;
+  line-height: 2;
+  width: 50%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.book-form {
+  width: 50%;
+  margin: 0 auto;
 }
 
 // Footer

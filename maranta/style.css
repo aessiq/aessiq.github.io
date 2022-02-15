@@ -3,9 +3,6 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-}
-
-:root {
   font-family: "Comfortaa", sans-serif;
 }
 
@@ -39,7 +36,7 @@
   display: flex;
   list-style-type: none;
   gap: 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .nav-item {
@@ -101,16 +98,15 @@
 
 .about-card__image {
   width: 45%;
-  height: 500px;
+  height: 600px;
+  background-image: url(./img/food1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .menu {
-  color: white;
+  color: #e2d5c2;
   background-color: #064034;
-}
-
-.menu-title {
-  color: white;
 }
 
 .menu-text {
@@ -152,7 +148,7 @@
   transition: 0.1s;
   border-radius: 30px;
   padding: 20px 10px;
-  background-color: rgba(123, 189, 38, 0.7);
+  background-color: rgba(6, 64, 52, 0.8);
 }
 .menu-link:hover {
   transform: scale(1.1);
@@ -190,6 +186,85 @@
 .map-yandex {
   width: 45%;
   height: 500px;
+}
+
+.photo {
+  background-color: #064034;
+  color: #e2d5c2;
+}
+
+.photo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.photo-slider-image {
+  width: 80%;
+}
+
+.fa-arrow-left, .fa-arrow-right {
+  font-size: 2rem;
+  color: #e2d5c2;
+  cursor: pointer;
+}
+
+.team {
+  background-color: #e2d5c2;
+  color: #064034;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.team-photo {
+  height: 500px;
+  width: 45%;
+  background-image: url(./img/team_chef.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.team-text {
+  width: 45%;
+  line-height: 2;
+  color: #064034;
+}
+
+.banket {
+  background-color: #064034;
+  color: #e2d5c2;
+}
+
+.banket-text {
+  line-height: 2;
+}
+
+.book {
+  background-color: #e2d5c2;
+  color: #064034;
+}
+
+.book-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.book-text {
+  color: #064034;
+  line-height: 2;
+  width: 50%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.book-form {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .footer {
