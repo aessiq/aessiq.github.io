@@ -8,42 +8,45 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/d9c761c1f7.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poiret+One&display=swap"
+    rel="stylesheet">
   <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
+  <script src="https://kit.fontawesome.com/d9c761c1f7.js" crossorigin="anonymous"></script>
   <title>Maranta</title>
 </head>
 
 <body>
-  <!-- TODO: бежевый цвет из меню -->
-  <!-- TODO: посты из инстаграмма -->
-  <!-- TODO: натянуть на wordpress -->
-  <!-- кнопка позвонить для мобильных -->
-  <!-- оставить отзыв -->
-  <!-- банкеты -->
-  <!-- отдельное меню -->
-  <!-- о нас -->
-  <!-- фото (?) -->
-  <!-- банкетное меню -->
-  <!-- переделать контакты -->
-  <!-- команда? -->
+  <!-- TODO: -->
+  <!-- посты из инстаграмма -->
   <!-- en/ru -->
   <!-- parrallax -->
-  <!-- меню на гугл драйв (пдф) -->
-  <!-- акции -->
   <header class="header" id="header">
-    <ul class="nav">
-      <li class="nav-item"><a class="nav-link" href="#hero">Главная</a></li>
-      <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
-      <li class="nav-item"><a class="nav-link" href="#menu">Меню</a></li>
-      <li class="nav-item"><a class="nav-link" href="#map">Контакты</a></li>
-      <li class="nav-item"><a class="nav-link" href="#photo">Фото</a></li>
-      <li class="nav-item"><a class="nav-link" href="#team">Команда</a></li>
-      <li class="nav-item"><a class="nav-link" href="#banket">Банкеты</a></li>
-      <li class="nav-item"><a class="nav-link" href="#book">Забронировать</a></li>
-    </ul>
-    <div class="header-right">
-      <a href="https://www.instagram.com/maranta.rest/"><i class="fa-brands fa-instagram header-insta-icon"></i></a>
+    <div class="wrapper header-wrapper">
+      <a href="./index.html" class="header-logo"></a>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Меню</a></li>
+        <li class="nav-item"><a class="nav-link" href="#map">Контакты</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#photo">Фото</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Команда</a></li>
+        <li class="nav-item"><a class="nav-link" href="#banket">Банкеты</a></li>
+        <li class="nav-item"><a class="nav-link" href="#book">Забронировать</a></li> -->
+      </ul>
+      <div class="header-right">
+        <a href="https://www.instagram.com/maranta.rest/"><i class="fa-brands fa-instagram header-insta-icon"></i></a>
+      </div>
+    </div>
+    <div class="mobile-header">
+      <label for="checkbox" class="burger"><i class="fa-solid fa-bars"></i></label>
+      <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+      <ul class="nav mobile-menu">
+        <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Меню</a></li>
+        <li class="nav-item"><a class="nav-link" href="#map">Контакты</a></li>
+      </ul>
     </div>
   </header>
 
@@ -51,6 +54,9 @@
 
     <section class="section hero" id="hero">
       <h1 class="hero-title">Maranta</h1>
+      <div class="hero-wrapper">
+        <img src="./img/logo.png" alt="Logo" class="hero-logo">
+      </div>
     </section>
 
     <section class="section about" id="about">
@@ -63,10 +69,10 @@
               моста и Смольного собора. Заведение назвали в честь цветка, который растет на юго-востоке Америки: по
               легенде он приносит удачу и достаток.
             </p>
-            <div class="about-card__image"></div>
+            <div class="about-card__image about-card__image-1"></div>
           </div>
           <div class="about-card">
-            <div class="about-card__image"></div>
+            <div class="about-card__image about-card__image-2"></div>
             <p class="about-card__text">
               Гостям предлагают блюда европейской кухни с авторской изюминкой от шефа Алексея Макарова (Ginza Project,
               Летучий Голландец). Повара варят томатный суп с морепродуктами и тыквенный крем-суп; готовят пасту с
@@ -88,7 +94,7 @@
               с
               рестораном предусмотрена парковка.
             </p>
-            <div class="about-card__image"></div>
+            <div class="about-card__image about-card__image-3"></div>
           </div>
         </div>
     </section>
@@ -120,8 +126,8 @@
           <div class="map-text">
             <h3 class="map-address-title">Наш адрес:</h3>
             <p class="map-address-text">Новгородская улица, дом 23.</p>
-            <p class="map-phone">8 (999) 555 66 77</p>
-            <p class="map-email">maranta@example.ru</p>
+            <p class="map-phone">8 (911) 753 23 23</p>
+            <!-- <p class="map-email">maranta@example.ru</p> -->
             <h3 class="map-hours-title">Часы работы:</h3>
             <p class="map-hours-text">С понедельника по четверг 10:00 - 21:00</p>
             <p class="map-hours-text">Пятница 10:00 - 23:00</p>
@@ -138,16 +144,16 @@
         </div>
     </section>
 
-    <section class="section photo" id="photo">
+    <!-- <section class="section photo" id="photo">
       <h2 class="section-title">Фото</h2>
       <div class="wrapper photo-wrapper">
         <i class="fa-solid fa-arrow-left"></i>
         <img class="photo-slider-image" src="./img/hero.jpg" alt="Photo">
         <i class="fa-solid fa-arrow-right"></i>
       </div>
-    </section>
+    </section> -->
 
-    <section class="section team" id="team">
+    <!-- <section class="section team" id="team">
       <h2 class="section-title">Наша команда</h2>
       <div class="wrapper">
         <div class="team-card">
@@ -164,9 +170,9 @@
             «Все гениальное - просто, а не гениальное - тяжело))»</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="section banket" id="banket">
+    <!-- <section class="section banket" id="banket">
       <h2 class="section-title">Банкеты</h2>
       <div class="wrapper">
         <p class="banket-text">Здесь будет какая-то информация про банкеты, цена, количество человек, что входит в меню
@@ -179,9 +185,9 @@
           Здесь будет какая-то информация про банкеты, цена, количество человек, что входит в меню и пара фоток со
           свадеб и корпоративов.</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="section book" id="book">
+    <!-- <section class="section book" id="book">
       <h2 class="section-title">Забронировать столик</h2>
       <div class="wrapper book-wrapper">
         <p class="book-text">Вы можете забронировать столик в нашем ресторане, заполнив эту форму. Мы перезвоним, чтобы
@@ -189,17 +195,16 @@
         <iframe src="https://forms.yandex.ru/cloud/620bf359978bf3801ddba661/?iframe=1" frameborder="0"
           name="ya-form-620bf359978bf3801ddba661" class="book-form"></iframe>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <footer class="footer">
-    <div class="footer-wrapper">
-      <p class="footer-phone"><i class="fa-solid fa-phone footer-phone-icon"></i>8 (999) 564 78 22</p>
+    <div class="wrapper footer-wrapper">
+      <p class="footer-phone"><i class="fa-solid fa-phone footer-phone-icon"></i>8 (911) 753 23 23</p>
       <a href="https://www.instagram.com/maranta.rest/" class="footer-insta-link"><i
           class="fa-brands fa-instagram footer-insta-icon"></i>maranta.rest</a>
     </div>
   </footer>
-  <a class="to-top" href="#hero"><i class="fa-solid fa-arrow-up"></i></a>
 </body>
 
 </html>
