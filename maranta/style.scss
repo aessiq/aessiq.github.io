@@ -472,11 +472,13 @@ $mineral_green: #43665E;
   .mobile-menu {
     height: 0;
     overflow: hidden;
+    color: white;
     transition: .5s;
     background-color: $green_hex;
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
 
   .nav {

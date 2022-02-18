@@ -442,11 +442,13 @@
   .mobile-menu {
     height: 0;
     overflow: hidden;
+    color: white;
     transition: 0.5s;
     background-color: #064034;
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
 
   .nav {
