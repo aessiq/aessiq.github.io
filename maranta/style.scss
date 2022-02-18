@@ -115,6 +115,10 @@ $mineral_green: #43665E;
   font-size: 1px;
 }
 
+.hero-logo {
+  display: none;
+}
+
 // About
 
 .about {
@@ -499,6 +503,7 @@ $mineral_green: #43665E;
   }
 
   .hero-logo {
+    display: block;
     width: 90%;
     position: absolute;
     top: 30%;

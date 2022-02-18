@@ -100,6 +100,10 @@
   font-size: 1px;
 }
 
+.hero-logo {
+  display: none;
+}
+
 .about {
   background-color: #e2d5c2;
   color: #064034;
@@ -469,6 +473,7 @@
   }
 
   .hero-logo {
+    display: block;
     width: 90%;
     position: absolute;
     top: 30%;
