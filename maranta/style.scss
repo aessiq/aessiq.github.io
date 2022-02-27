@@ -2,10 +2,11 @@
 // $beige_rgba: rgba(226,213,195,.5);
 $green_hex: #064034;
 $beige_hex: #e2d5c2;
+// $beige_hex: #fff;
 
 $msu_green: #0F4436;
 $sea_nymph: #7E9F98;
-$phthalo_green: #0C352B;
+$dark_green: #0C352B;
 $azureish_white: #D4EFEA;
 $mineral_green: #43665E;
 
@@ -122,7 +123,7 @@ $mineral_green: #43665E;
 // About
 
 .about {
-  background-color: $beige_hex;
+  background-color: white;
   color: $green_hex;
 }
 
@@ -216,7 +217,7 @@ $mineral_green: #43665E;
 // Как добраться
 .map {
   color: $green_hex;
-  background-color: $beige_hex;
+  background-color: white;
 }
 
 .map-wrapper {
@@ -250,7 +251,7 @@ $mineral_green: #43665E;
 
 .photo {
   background-color: $green_hex;
-  color: $beige_hex;
+  color: white;
 }
 
 .photo-wrapper {
@@ -265,14 +266,14 @@ $mineral_green: #43665E;
 
 .fa-arrow-left, .fa-arrow-right {
   font-size: 2rem;
-  color: $beige_hex;
+  color: white;
   cursor: pointer;
 }
 
 // Команда
 
 .team {
-  background-color: $beige_hex;
+  background-color: white;
   color: $green_hex;
 }
 
@@ -300,7 +301,7 @@ $mineral_green: #43665E;
 
 .banket {
   background-color: $green_hex;
-  color: $beige_hex;
+  color: white;
 }
 
 .banket-text {
@@ -310,7 +311,7 @@ $mineral_green: #43665E;
 // Забронировать
 
 .book {
-  background-color: $beige_hex;
+  background-color: white;
   color: $green_hex;
 }
 
@@ -465,7 +466,7 @@ $mineral_green: #43665E;
   }
 
   .checkbox:checked ~ .mobile-menu {
-    height: 170px;
+    height: 130px;
     overflow: auto;
   }
 

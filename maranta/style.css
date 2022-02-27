@@ -105,7 +105,7 @@
 }
 
 .about {
-  background-color: #e2d5c2;
+  background-color: white;
   color: #064034;
 }
 
@@ -198,7 +198,7 @@
 
 .map {
   color: #064034;
-  background-color: #e2d5c2;
+  background-color: white;
 }
 
 .map-wrapper {
@@ -230,7 +230,7 @@
 
 .photo {
   background-color: #064034;
-  color: #e2d5c2;
+  color: white;
 }
 
 .photo-wrapper {
@@ -245,12 +245,12 @@
 
 .fa-arrow-left, .fa-arrow-right {
   font-size: 2rem;
-  color: #e2d5c2;
+  color: white;
   cursor: pointer;
 }
 
 .team {
-  background-color: #e2d5c2;
+  background-color: white;
   color: #064034;
 }
 
@@ -276,7 +276,7 @@
 
 .banket {
   background-color: #064034;
-  color: #e2d5c2;
+  color: white;
 }
 
 .banket-text {
@@ -284,7 +284,7 @@
 }
 
 .book {
-  background-color: #e2d5c2;
+  background-color: white;
   color: #064034;
 }
 
@@ -435,7 +435,7 @@
   }
 
   .checkbox:checked ~ .mobile-menu {
-    height: 170px;
+    height: 130px;
     overflow: auto;
   }
 
