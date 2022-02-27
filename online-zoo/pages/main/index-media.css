@@ -1,4 +1,14 @@
 /* New classes added in small screens */
+
+:root {
+  --black: #0D444D;
+  --bamboo-tree: #216E7A;
+  --white: #C5E1E5;
+  --bg: #2A8086;
+  --hero-text: #F3F7F8;
+  --bttn-black: #0D444D;
+}
+
 .mobile-menu {
   display: none;
 }
@@ -301,7 +311,7 @@
   }
 
   .look-at-animals__slider-wrapper {
-    width: 1120px;
+    width: 100%;
     position: relative;
     overflow: hidden;
     margin-top: 47px;
@@ -354,6 +364,7 @@
   .wrapper {
     width: 600px;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   header {
@@ -616,7 +627,8 @@
     padding-top: 54px;
     margin-top: -19px;
     background: url(../../assets/icons/640-pay-and-feed-bg.svg);
-    background-position: top -90px left 0;
+    background-color: var(--bamboo-);
+    background-position: top -150px left 0;
     background-repeat: no-repeat;
     background-size: cover;
     height: 373px;
@@ -753,6 +765,10 @@
   .look-at-animals {
     margin-top: 24px;
   }
+  
+  .look-at-animals__slider-wrapper {
+    width: 95%;
+  }
 
   .look-at-animals__slider {
     gap: 64px;
@@ -766,7 +782,7 @@
 
   .look-at-animals__arrow-left,
   .look-at-animals__arrow-right {
-    top: -2px;
+    top: 30px;
     right: -9px;
   }
 
@@ -900,7 +916,7 @@
   /* Mid bg */
 
   .mid-bg {
-    background: url(../../assets/icons/320-mid-bg.svg);
+    background: var(--bg);
     margin-top: 9px;
   }
 
@@ -928,10 +944,6 @@
   .pets-in-zoo {
     position: relative;
     height: 825px;
-  }
-
-  .pets-in-zoo__header {
-    margin-top: -6px;
   }
 
   .pets-in-zoo__header a {
@@ -977,7 +989,7 @@
   .pay-and-feed {
     padding-top: 0px;
     height: 904px;
-    background: url(../../assets/icons/320-pay-and-feed.svg);
+    background: var(--bg)
   }
 
   .pay-and-feed .container {
@@ -990,8 +1002,17 @@
     right: 13px;
   }
 
+  .pay-and-feed__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .pay-and-feed__header a {
+    top: 773px;
+    padding: 10px 73px;
     position: absolute;
+    right: auto;
   }
 
   .pay-and-feed__header h2 {
@@ -1013,12 +1034,6 @@
     left: 45px;
   }
 
-  .pay-and-feed__header a {
-    right: 9px;
-    top: 773px;
-    padding: 10px 73px;
-  }
-
   /* Testimonials */
 
   .testimonials {
@@ -1032,7 +1047,7 @@
 
   .testimonials__header a {
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
   }
 
   .comments {

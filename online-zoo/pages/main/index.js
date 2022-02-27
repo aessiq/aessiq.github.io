@@ -225,8 +225,16 @@ lookAtAnimalsSliderArrowNext.addEventListener('click', () => {
 lookAtAnimalsSliderArrowPrev.addEventListener('click', () => {
   prevSlide();
 });
-
-let lookAtAnimalsSliderTimer = setInterval(nextSlide, 10000);
+let screenWidth = document.body.clientWidth;
+const onresize = function() {
+  screenWidth = document.body.clientWidth;
+  console.log(screenWidth);
+}
+window.addEventListener("resize", onresize);
+let lookAtAnimalsSliderTimer;
+if (screenWidth > 600) {
+  lookAtAnimalsSliderTimer = setInterval(nextSlide, 10000);
+}
 
 //Automatic carousel 
 
