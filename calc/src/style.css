@@ -21,7 +21,7 @@ body {
   height: 650px;
   border-radius: 20px;
   background-color: #2D5A9D;
-  box-shadow: 0 0 0px 30px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.3);
   overflow: hidden;
   font-size: 2rem;
   color: white;
