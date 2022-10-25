@@ -1,8 +1,0 @@
-.header__title {
-  font-family: 'Press Start 2P', cursive;
-  transition: .5s;
-}
-
-.header__title:hover {
-  transform: scale(105%);
-}
